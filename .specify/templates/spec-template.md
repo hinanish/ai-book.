@@ -84,16 +84,19 @@
 
 ### Functional Requirements
 
-- **FR-001**: System MUST [specific capability, e.g., "allow users to create accounts"]
-- **FR-002**: System MUST [specific capability, e.g., "validate email addresses"]  
-- **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
-- **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
-- **FR-005**: System MUST [behavior, e.g., "log all security events"]
+- **FR-001**: System MUST follow Zero External UI Libraries principle (only use shadcn/ui and Tailwind)
+- **FR-002**: System MUST implement Mobile-First Design with glassmorphism and gradient design
+- **FR-003**: System MUST use MDX for all book content to enable easy future updates
+- **FR-004**: System MUST ensure 100% accessibility with ARIA labels and keyboard navigation
+- **FR-005**: System MUST maintain lightning fast performance with <1.5s First Contentful Paint
+- **FR-006**: System MUST enforce TypeScript strict mode for all code
+- **FR-007**: System MUST implement dark/light mode toggle
+- **FR-008**: System MUST keep total bundle size under 150KB (excluding images)
 
 *Example of marking unclear requirements:*
 
-- **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
-- **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
+- **FR-009**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
+- **FR-010**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
 
 ### Key Entities *(include if feature involves data)*
 

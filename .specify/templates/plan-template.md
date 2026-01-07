@@ -31,7 +31,15 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- Zero External UI Libraries: Only use shadcn/ui and Tailwind for UI components
+- Mobile-First Design: Implement mobile-first approach with glassmorphism and gradient design
+- MDX Content Management: Use MDX for all book content to enable easy future updates
+- Accessibility Standards: Ensure 100% accessibility with ARIA labels and keyboard navigation
+- Performance Optimization: Maintain lightning fast performance with <1.5s First Contentful Paint
+- TypeScript Strict Mode: Enforce TypeScript strict mode for all code
+- Bundle Size: Total bundle size must remain under 150KB (excluding images)
+- Dark/Light Mode: Implement dark/light mode toggle
+- Vercel Deployment: Deploy on Vercel (free tier)
 
 ## Project Structure
 

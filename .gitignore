@@ -1,0 +1,86 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env*
+!.env.example
+
+# Next.js
+.next/
+out/
+
+# Next.js build outputs
+!.next/static/chunks/
+!.next/static/css/
+!.next/server/
+!.next/serverless/
+
+# Production build
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage directory used by tools like istanbul
+coverage/
+!.nyc_output/
+
+# Memory dumps
+*.dump
+*.heap
+*.map
+
+# Debug log
+debug.log
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# OS generated files
+ehthumbs.db
+Icon?
+Network Trash Folder
+Temporary Items
+.Trashes
+*.swp
+*.swo
+*~
+
+# Build outputs
+build/
+public/build/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Temporary folders
+tmp/
+temp/
+
+# Nuxt
+.nuxt/
+dist/
+
+# Serverless
+.serverless/
+
+# Yarn
+.yarn/
+pnp.lock.yaml
+
+# Turbopack
+.turbopack/
+
+# Next.js cache
+.cache/

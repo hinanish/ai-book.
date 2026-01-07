@@ -49,8 +49,10 @@ description: "Task list template for feature implementation"
 **Purpose**: Project initialization and basic structure
 
 - [ ] T001 Create project structure per implementation plan
-- [ ] T002 Initialize [language] project with [framework] dependencies
-- [ ] T003 [P] Configure linting and formatting tools
+- [ ] T002 Initialize Next.js 15 project with Tailwind CSS dependencies
+- [ ] T003 [P] Configure TypeScript with strict mode
+- [ ] T004 [P] Configure shadcn/ui for component library
+- [ ] T005 Setup MDX configuration for content management
 
 ---
 
@@ -62,12 +64,13 @@ description: "Task list template for feature implementation"
 
 Examples of foundational tasks (adjust based on your project):
 
-- [ ] T004 Setup database schema and migrations framework
-- [ ] T005 [P] Implement authentication/authorization framework
-- [ ] T006 [P] Setup API routing and middleware structure
-- [ ] T007 Create base models/entities that all stories depend on
-- [ ] T008 Configure error handling and logging infrastructure
-- [ ] T009 Setup environment configuration management
+- [ ] T006 Setup mobile-first responsive design foundation with Tailwind
+- [ ] T007 [P] Implement accessibility features (ARIA labels, keyboard navigation)
+- [ ] T008 [P] Setup dark/light mode toggle functionality
+- [ ] T009 Create base components following design principles
+- [ ] T010 Configure performance monitoring and optimization tools
+- [ ] T011 Setup content structure in /content/chapters/
+- [ ] T012 Configure Vercel deployment settings
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -152,10 +155,12 @@ Examples of foundational tasks (adjust based on your project):
 
 - [ ] TXXX [P] Documentation updates in docs/
 - [ ] TXXX Code cleanup and refactoring
-- [ ] TXXX Performance optimization across all stories
+- [ ] TXXX Performance optimization across all stories to achieve <1.5s FCP
+- [ ] TXXX [P] Bundle size optimization to stay under 150KB (excluding images)
 - [ ] TXXX [P] Additional unit tests (if requested) in tests/unit/
 - [ ] TXXX Security hardening
 - [ ] TXXX Run quickstart.md validation
+- [ ] TXXX Final accessibility audit and compliance check
 
 ---
 
