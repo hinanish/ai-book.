@@ -68,13 +68,18 @@ Make sure all dependencies in `package.json` are correct and compatible. The pro
 
 ### 3. Check Next.js Configuration
 
-Verify that `next.config.js` is properly configured for MDX and contentlayer:
+Verify that `next.config.js` is properly configured for MDX and contentlayer2:
 
 ```js
+const { withContentlayer } = require('contentlayer2/next');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
     mdxRs: true,
+  },
+  images: {
+    unoptimized: true, // For static exports, if needed
   },
 };
 
@@ -86,18 +91,18 @@ const withMDX = require('@next/mdx')({
   },
 });
 
-module.exports = withMDX({
+module.exports = withContentlayer(withMDX({
   ...nextConfig,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-});
+}));
 ```
 
-### 4. Verify Contentlayer Configuration
+### 4. Verify Contentlayer2 Configuration
 
 Ensure `contentlayer.config.js` is properly set up:
 
 ```js
-import { defineDocumentType, makeSource } from 'contentlayer/source-files';
+import { defineDocumentType, makeSource } from 'contentlayer2/source-files';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
@@ -140,6 +145,13 @@ If your project requires environment variables, make sure to set them in the Ver
 
 Check if you have any custom routing that might be causing the 404. The `vercel.json` file should be properly configured.
 
+## Resolving Package Version Issues
+
+If you encounter errors like `No matching version found for @contentlayer2/source-files@^0.1.5`, make sure you're using the correct version numbers in your `package.json`. The current working versions are:
+
+- `"contentlayer2": "^0.4.6"`
+- `"@contentlayer2/source-files": "^0.4.6"`
+
 ## Additional Tips
 
 1. **Check the Build Logs**: Look at the deployment logs in the Vercel dashboard for any errors during the build process.
@@ -148,6 +160,7 @@ Check if you have any custom routing that might be causing the 404. The `vercel.
 
 3. **Test Locally**: Before deploying, test the build locally:
    ```bash
+   npm run contentlayer2 build
    npm run build
    npm run start
    ```

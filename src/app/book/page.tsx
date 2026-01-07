@@ -163,44 +163,44 @@ The concept of AI safety is also gaining traction, focusing on ensuring that AI 
 export default function BookPage() {
   const [currentChapterIndex, setCurrentChapterIndex] = useState(0);
   const [readingProgress, setReadingProgress] = useLocalStorage<{[chapterId: string]: number}>('readingProgress', {});
-  
+
   const handleChapterChange = (index: number) => {
     setCurrentChapterIndex(index);
   };
-  
+
   const handleProgressChange = (chapterId: string, progress: number) => {
     setReadingProgress(prev => ({
       ...prev,
       [chapterId]: progress
     }));
   };
-  
+
   return (
     <div className="min-h-screen bg-background">
       <div className="container max-w-4xl mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6 text-center">AI-Native Driven Development</h1>
-        
+
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Chapter Navigation Sidebar */}
           <div className="lg:w-1/4">
-            <ChapterNavigation 
-              chapters={chapters} 
-              currentChapterIndex={currentChapterIndex} 
-              onChapterChange={handleChapterChange} 
+            <ChapterNavigation
+              chapters={chapters}
+              currentChapterIndex={currentChapterIndex}
+              onChapterChange={handleChapterChange}
             />
-            
+
             <div className="mt-6">
-              <ChapterProgress 
-                chapters={chapters} 
-                progressByChapter={readingProgress} 
+              <ChapterProgress
+                chapters={chapters}
+                progressByChapter={readingProgress}
               />
             </div>
           </div>
-          
+
           {/* Book Content */}
           <div className="lg:w-3/4">
-            <BookContent 
-              chapters={chapters} 
+            <BookContent
+              chapters={chapters}
               currentChapterIndex={currentChapterIndex}
               onProgressChange={(progress) => {
                 if (chapters[currentChapterIndex]) {
