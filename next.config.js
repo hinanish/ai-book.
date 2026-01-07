@@ -3,6 +3,9 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
+  images: {
+    unoptimized: true, // For static exports, if needed
+  },
 };
 
 const withMDX = require('@next/mdx')({

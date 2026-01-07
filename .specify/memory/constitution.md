@@ -42,3 +42,4 @@ Implement dark/light mode toggle; Follow Next.js 15 best practices; Use Tailwind
 All code must comply with the stated principles; Performance budgets must be maintained; Accessibility requirements are mandatory; Code reviews must verify compliance with all principles
 
 **Version**: 1.0.0 | **Ratified**: 2026-01-06 | **Last Amended**: 2026-01-06
+

@@ -16,6 +16,7 @@ This is a premium book website for AI-Native Driven Development built with Next.
 ## Tech Stack
 
 - Next.js 15 (App Router)
+- React 18
 - TypeScript
 - Tailwind CSS
 - shadcn/ui
@@ -74,6 +75,7 @@ If you encounter a 404 error on Vercel, please check:
 3. **Check that the output directory** is set to `.next` (default for Next.js)
 4. **Confirm that all required environment variables** are set (if any)
 5. **Verify that the Next.js configuration** is correct in next.config.js
+6. **Check for dependency conflicts** - we've resolved React/Lucide-react compatibility issues
 
 ## Learn More
 
@@ -88,3 +90,11 @@ To learn more about the technologies used in this project:
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Support
+
+If you continue to experience issues after trying these solutions:
+
+1. Check the Vercel documentation: https://vercel.com/docs
+2. Visit the Next.js documentation: https://nextjs.org/docs
+3. Create an issue in the project repository

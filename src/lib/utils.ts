@@ -54,3 +54,12 @@ export function calculateReadingTime(wordCount: number): number {
   const wordsPerMinute = 200; // Average reading speed
   return Math.ceil(wordCount / wordsPerMinute);
 }
+
+/**
+ * Class name utility function
+ * @param classes List of class names
+ * @returns A combined string of class names
+ */
+export function cn(...classes: (string | boolean | undefined)[]): string {
+  return classes.filter(Boolean).join(' ');
+}
