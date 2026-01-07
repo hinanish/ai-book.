@@ -21,7 +21,7 @@ This is a premium book website for AI-Native Driven Development built with Next.
 - Tailwind CSS
 - shadcn/ui
 - MDX for content
-- Contentlayer2 for content processing
+- Contentlayer for content processing
 
 ## Getting Started
 

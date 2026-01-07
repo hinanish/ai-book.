@@ -60,8 +60,8 @@ Make sure all dependencies in `package.json` are correct and compatible. The pro
 - `react`
 - `react-dom`
 - `@next/mdx`
-- `contentlayer2`
-- `@contentlayer2/source-files`
+- `contentlayer`
+- `@contentlayer/source-files`
 - `remark-gfm`
 - `rehype-slug`
 - `rehype-autolink-headings`
@@ -75,6 +75,9 @@ Verify that `next.config.js` is properly configured for MDX and contentlayer:
 const nextConfig = {
   experimental: {
     mdxRs: true,
+  },
+  images: {
+    unoptimized: true, // For static exports, if needed
   },
 };
 
@@ -153,6 +156,10 @@ Check if you have any custom routing that might be causing the 404. The `vercel.
    ```
 
 4. **Clear Cache**: If issues persist, try clearing the Vercel build cache from the project settings.
+
+5. **Package Version Issues**: If you encounter errors like `No matching version found for @contentlayer/source-files@^0.1.5`, make sure you're using the correct version numbers in your `package.json`. The current working versions are:
+   - `"contentlayer": "0.3.4"`
+   - `"@contentlayer/source-files": "0.3.4"`
 
 ## Support
 
